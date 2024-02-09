@@ -31,7 +31,7 @@ class ReportController extends Controller
 
     public function getWithdrawalsOutOfCity(): View
     {
-        $users = $this->userRepository->getClientsWithTransactionsOutsideOriginCity(Transaction::WITHDRAWAL, 100, 10);
+        $users = $this->userRepository->getClientsWithTransactionsOutsideOriginCity(Transaction::WITHDRAWAL, 1000000, 10);
         return view('reports.client_withdrawals', compact('users'));
     } 
 }
